@@ -1,0 +1,44 @@
+<div class="container-fluid bg-white">
+    <div
+        class="h-10 flex items-center justify-center px-4 text-sm md:text-base text-white bg-gradient-to-r from-green-500 via-green-600 to-green-500 relative overflow-hidden">
+        <mat-icon class="mr-2 text-white animate-pulse">location_on</mat-icon>
+        <span class="font-semibold tracking-wide">Your Trusted Property Partner</span>
+        <mat-icon class="ml-2 text-white hidden md:inline animate-pulse">support_agent</mat-icon>
+    </div>
+    <header class="container  mx-auto text-dark p-4 flex justify-between items-center relative z-50 !sticky top-0 bg-white">
+        <!-- Logo -->
+        <div class="text-xl font-bold">
+            <a routerLink="/">
+                <img src="../../../../logo/logo.png" class="w-64" alt="">
+            </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex navitems">
+            <a routerLink="/">Home</a>
+            <a routerLink="/about">About Us</a>
+            <a routerLink="/about">Services</a>
+            <a routerLink="/contact">Contact Us</a>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button class="md:hidden z-50" (click)="toggleMobileMenu()">
+            <mat-icon>{{ mobileMenuOpen ? 'close' : 'menu' }}</mat-icon>
+        </button>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="fixed inset-0 bg-black !bg-opacity-10 z-40 duration-300" *ngIf="mobileMenuOpen"
+        (click)="toggleMobileMenu()"></div>
+
+    <!-- Mobile Sliding Menu -->
+    <div class="fixed top-0 right-0 h-full w-64 bg-blue-700 text-white transform transition-transform duration-300 z-50"
+        [ngClass]="{'translate-x-0': mobileMenuOpen, 'translate-x-full': !mobileMenuOpen}">
+        <nav class="flex flex-col mt-16 space-y-4 p-4">
+            <a routerLink="/" (click)="toggleMobileMenu()" class="hover:text-gray-200">Home</a>
+            <a routerLink="/about" (click)="toggleMobileMenu()" class="hover:text-gray-200">About Us</a>
+            <a routerLink="/contact" (click)="toggleMobileMenu()" class="hover:text-gray-200">Contact Us</a>
+        </nav>
+    </div>
+
+</div>

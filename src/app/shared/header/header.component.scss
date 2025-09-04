@@ -1,0 +1,36 @@
+.navitems {
+    a {
+        font-size: 16px;
+        text-transform: capitalize;
+        line-height: 32px;
+        padding: 6px 16px;
+        color: #000;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #2bb359;
+            color: #ffffff;
+            transition: all 0.25s;
+            border-radius: 3px;
+        }
+    }
+}
+
+@keyframes textGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-text {
+    background-size: 200% 200%;
+    animation: textGradient 5s ease infinite;
+}
