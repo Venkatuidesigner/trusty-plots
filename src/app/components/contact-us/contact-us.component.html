@@ -1,4 +1,6 @@
-
+<!-- ========================================= -->
+<!--             Main Hero Sec                 -->
+<!-- ========================================= -->
 <section class="relative bg-fixed bg-center bg-cover py-20 px-6"
     style="background-image: url('../../../../images/main-bg.jpg');">
     <!-- Overlay -->
@@ -13,8 +15,10 @@
 </section>
 
 
-<!-- Section 1: Contact Detail Cards -->
-<section class="w-full bg-gray-50 py-20">
+<!-- ========================================= -->
+<!--        Contact Details Card.              -->
+<!-- ========================================= -->
+<section class="w-full bg-gray-50 padding-section">
   <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-8">
     <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
       <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">location_on</span>
@@ -38,7 +42,11 @@
     </div>
   </div>
 </section>
-<section class="w-full bg-gray-50 py-20 px-6">
+
+<!-- ========================================= -->
+<!--        Map and Form Details.              -->
+<!-- ========================================= -->
+<section class="w-full bg-gray-50 px-6  padding-section">
   <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
 
     <!-- Map -->
@@ -54,7 +62,8 @@
 
     <!-- Contact Form -->
     <div class="bg-white rounded-2xl shadow-xl p-10 relative">
-      <h2 class="text-3xl font-bold mb-6">Send Us a Message</h2>
+      <h2 class="text-3xl font-bold mb-2">Send Us a Message</h2>
+      <p class="mb-4 text-gray-500">We’re here to help with your property journey. Drop us a message, and our experts will guide you every step of the way.</p>
 
       <form [formGroup]="contactForm" (ngSubmit)="sendMail()">
 

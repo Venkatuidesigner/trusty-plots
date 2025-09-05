@@ -10,7 +10,7 @@
         <!-- Logo -->
         <div class="text-xl font-bold">
             <a routerLink="/">
-                <img src="../../../../logo/logo-1.png" class="w-64" alt="">
+                <img [src]="logo" class="w-64" alt="">
             </a>
         </div>
 
@@ -19,8 +19,10 @@
             <a routerLink="/home" routerLinkActive="active">Home</a>
             <a routerLink="/about" routerLinkActive="active">About Us</a>
             <a routerLink="/services" routerLinkActive="active">Services</a>
+            <a routerLink="/properties" routerLinkActive="active">Properties</a>
             <a routerLink="/blog" routerLinkActive="active">Blog</a>
-            <a routerLink="/contact">Contact Us</a>
+            
+            <a routerLink="/contact-us">Contact Us</a>
         </nav>
 
         <!-- Mobile Hamburger -->
@@ -39,7 +41,7 @@
         <nav class="flex flex-col mt-16 space-y-4 p-4">
             <a routerLink="/" (click)="toggleMobileMenu()" class="hover:text-gray-200">Home</a>
             <a routerLink="/about" (click)="toggleMobileMenu()" class="hover:text-gray-200">About Us</a>
-            <a routerLink="/contact" (click)="toggleMobileMenu()" class="hover:text-gray-200">Contact Us</a>
+            <a routerLink="/contact-us" (click)="toggleMobileMenu()" class="hover:text-gray-200">Contact Us</a>
         </nav>
     </div>
 

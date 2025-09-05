@@ -1,5 +1,5 @@
 <!-- ========================================= -->
-<!--             Main Slider.                  -->
+<!--             Main Hero Sec                 -->
 <!-- ========================================= -->
 <section class="bg-gray-50 min-h-[700px] flex items-center main-section relative overflow-hidden z-10">
   <div class="container mx-auto px-4 flex flex-col md:flex-row ">
@@ -13,7 +13,7 @@
         We provide the best real estate services to help you find your dream home with trust, transparency, and
         professionalism.
       </p>
-      <a routerLink="/contact"
+      <a routerLink="/contact-us"
         class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-semibold transition-colors duration-300 primary-button ">
         Contact Us
       </a>
@@ -25,16 +25,6 @@
 
   </div>
   <div class="path-svg">
-    <!-- <svg fill="#fff" id="Layer_1" x="0px" y="0px" viewBox="0 0 1921 819.8" style="enable-background:new 0 0 1921 819.8;"
-      xml:space="preserve">
-      <path class="st0"
-        d="M1921,413.1v406.7H0V0.5h0.4l228.1,598.3c30,74.4,80.8,130.6,152.5,168.6c107.6,57,212.1,40.7,245.7,34.4  c22.4-4.2,54.9-13.1,97.5-26.6L1921,400.5V413.1z">
-      </path>
-      <path class="st1"
-        d="M1921,387.9v431.9H0V0h13l226.6,594.4c14.4,35.7,34,67.4,58.3,94.3c24.4,26.9,54.2,49.8,88.6,68.1  c50.2,26.6,105.8,40.1,165.2,40.1c36.1,0,63.6-5.2,72.6-6.9c21.6-4,53.9-12.9,96.1-26.2L1921,387.9z">
-      </path>
-    </svg> -->
-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path fill="#ffffff" fill-opacity="1"
         d="M0,320L20,314.7C40,309,80,299,120,266.7C160,235,200,181,240,170.7C280,160,320,192,360,192C400,192,440,160,480,154.7C520,149,560,171,600,197.3C640,224,680,256,720,261.3C760,267,800,245,840,240C880,235,920,245,960,213.3C1000,181,1040,107,1080,106.7C1120,107,1160,181,1200,224C1240,267,1280,277,1320,261.3C1360,245,1400,203,1420,181.3L1440,160L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z">
@@ -56,64 +46,28 @@
 
     <!-- Cards Row -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-
-      <!-- Card 1 -->
-      <div class="property-card">
+      <div class="property-card" *ngFor="let property of properties">
         <div class="image-wrapper">
-          <img src="../../../../images/about-us.png" alt="New Apartment">
+          <img [src]="property.img" [alt]="property.title">
         </div>
         <div class="card-content">
-          <span class="text-sm font-semibold text-white bg-[#E91E63] px-3 py-1 rounded-full">For Sale</span>
-          <h3 class="mt-2 text-xl font-semibold text-gray-800">New Apartment Nice View</h3>
-          <p class="text-gray-600 mb-1">Belmont Gardens, Chicago</p>
-          <p class="text-gray-500 mb-2 text-sm">3 Bed • 2 Bath • 3450 Sq Ft</p>
-          <p class="text-[#2bb359] font-bold text-lg">$34,900</p>
+          <span class="text-sm font-semibold text-white bg-[#E91E63] px-3 py-1 rounded-full">
+            {{ property.status }}
+          </span>
+          <h3 class="mt-2 text-xl font-semibold text-gray-800">{{ property.title }}</h3>
+          <p class="text-gray-600 mb-1">{{ property.location }}</p>
+          <p class="text-gray-500 mb-2 text-sm">{{ property.details }}</p>
+          <p class="text-[#2bb359] font-bold text-lg">{{ property.price }}</p>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="property-card">
-        <div class="image-wrapper">
-          <img src="../../../../images/about-us.png" alt="Modern Apartment">
-        </div>
-        <div class="card-content">
-          <span class="text-sm font-semibold text-white bg-[#E91E63] px-3 py-1 rounded-full">For Sale</span>
-          <h3 class="mt-2 text-xl font-semibold text-gray-800">City View Apartment</h3>
-          <p class="text-gray-600 mb-1">Downtown, New York</p>
-          <p class="text-gray-500 mb-2 text-sm">2 Bed • 2 Bath • 1500 Sq Ft</p>
-          <p class="text-[#2bb359] font-bold text-lg">$18,500</p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="property-card">
-        <div class="image-wrapper">
-          <img src="../../../../images/about-us.png" alt="Luxury Villa">
-        </div>
-        <div class="card-content">
-          <span class="text-sm font-semibold text-white bg-[#E91E63] px-3 py-1 rounded-full">For Sale</span>
-          <h3 class="mt-2 text-xl font-semibold text-gray-800">Luxury Villa</h3>
-          <p class="text-gray-600 mb-1">Palm Beach, Miami</p>
-          <p class="text-gray-500 mb-2 text-sm">5 Bed • 4 Bath • 4500 Sq Ft</p>
-          <p class="text-[#2bb359] font-bold text-lg">$65,000</p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="property-card">
-        <div class="image-wrapper">
-          <img src="../../../../images/about-us.png" alt="Cozy Cottage">
-        </div>
-        <div class="card-content">
-          <span class="text-sm font-semibold text-white bg-[#E91E63] px-3 py-1 rounded-full">For Sale</span>
-          <h3 class="mt-2 text-xl font-semibold text-gray-800">Cozy Cottage</h3>
-          <p class="text-gray-600 mb-1">Maple Street, Boston</p>
-          <p class="text-gray-500 mb-2 text-sm">2 Bed • 1 Bath • 900 Sq Ft</p>
-          <p class="text-[#2bb359] font-bold text-lg">$12,500</p>
-        </div>
-      </div>
-
     </div>
+
+      <div class="mt-10 text-center">
+        <a class="px-6 py-3 bg-[#2bb359] hover:bg-[#000] cursor-pointer text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition"
+          routerLink="/properties">
+          View All Properties
+        </a>
+      </div>
   </div>
 </section>
 
@@ -165,22 +119,6 @@
     </div>
 
   </div>
-  <!-- <div class="path-svg-top overflow-hidden">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#ffffff" fill-opacity="1"
-        d="M0,128L60,149.3C120,171,240,213,360,229.3C480,245,600,235,720,213.3C840,192,960,160,1080,165.3C1200,171,1320,213,1380,234.7L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
-      </path>
-    </svg>
-  </div>
-
-  <div class="path-svg !z-[1] !-bottom-16 w-full overflow-hidden">
-
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#ffffff" fill-opacity="1"
-        d="M0,128L60,149.3C120,171,240,213,360,229.3C480,245,600,235,720,213.3C840,192,960,160,1080,165.3C1200,171,1320,213,1380,234.7L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
-      </path>
-    </svg>
-  </div> -->
 </section>
 
 
@@ -199,34 +137,11 @@
 
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 cards-row">
-
-
-      <div class="cards">
-        <img src="../../../../images/wcu/wcu-1.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Wide Property Choices</h3>
-        <p class="text-gray-600">
-          Explore a wide range of residential and commercial properties to suit every budget and lifestyle.
-        </p>
+      <div class="cards" *ngFor="let card of wcuCards">
+        <img [src]="card.img" [alt]="card.title">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ card.title }}</h3>
+        <p class="text-gray-600">{{ card.description }}</p>
       </div>
-
-
-      <div class="cards">
-        <img src="../../../../images/wcu/wcu-2.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Trusted & Verified</h3>
-        <p class="text-gray-600">
-          All our listings are verified to ensure transparency and reliability for your peace of mind.
-        </p>
-      </div>
-
-
-      <div class="cards">
-        <img src="../../../../images/wcu/wcu-3.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Expert Guidance</h3>
-        <p class="text-gray-600">
-          Get personalized assistance from experienced real estate experts at every step of your journey.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
@@ -266,9 +181,10 @@
         </li>
       </ul>
       <div class="mt-6">
-        <button class="px-6 py-3 bg-[#2bb359] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition">
+        <a class="px-6 py-3 bg-[#2bb359] hover:bg-[#000] cursor-pointer text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition"
+          routerLink="/about">
           Learn More
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -288,61 +204,11 @@
 
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 cards-row">
-
-      <!-- Card 1 -->
-      <div class="cards">
-        <img src="../../../../images/services/1.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Property Sales</h3>
-        <p class="text-gray-600">
-          Buy and sell residential & commercial properties with ease and reliability.
-        </p>
+      <div class="cards" *ngFor="let service of services">
+        <img [src]="service.img" [alt]="service.title">
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ service.title }}</h3>
+        <p class="text-gray-600">{{ service.description }}</p>
       </div>
-
-      <!-- Card 2 -->
-      <div class="cards">
-        <img src="../../../../images/services/2.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Property Rentals</h3>
-        <p class="text-gray-600">
-          Affordable rental solutions with verified listings to suit every budget.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="cards">
-        <img src="../../../../images/services/3.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Land Development</h3>
-        <p class="text-gray-600">
-          Trusted services in land development and plotting for future investments.
-        </p>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="cards">
-        <img src="../../../../images/services/4.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Real Estate Consulting</h3>
-        <p class="text-gray-600">
-          Professional advice to help you make informed property decisions.
-        </p>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="cards">
-        <img src="../../../../images/services/5.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Legal Assistance</h3>
-        <p class="text-gray-600">
-          Hassle-free documentation and legal support for property transactions.
-        </p>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="cards">
-        <img src="../../../../images/services/6.svg" alt="">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Customer Support</h3>
-        <p class="text-gray-600">
-          Dedicated 24/7 support to assist you at every step of your property journey.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>

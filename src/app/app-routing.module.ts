@@ -5,13 +5,15 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { ServicesComponent } from './components/services/services.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { PropertiesComponent } from './components/properties/properties.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutUsComponent },
-  { path: 'contact', component: ContactUsComponent },
+  { path: 'contact-us', component: ContactUsComponent },
   { path: 'services', component: ServicesComponent },
+  { path: 'properties', component: PropertiesComponent },
   { path: 'blog', component: BlogComponent },
   { path: '**', redirectTo: '' } // fallback
 ];

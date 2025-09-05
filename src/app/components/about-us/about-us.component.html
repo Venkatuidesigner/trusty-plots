@@ -1,3 +1,6 @@
+<!-- ========================================= -->
+<!--             Main Hero Sec                 -->
+<!-- ========================================= -->
 <section class="relative bg-fixed bg-center bg-cover py-20 px-6"
     style="background-image: url('../../../../images/main-bg.jpg');">
     <!-- Overlay -->
@@ -14,42 +17,20 @@
     </div>
 </section>
 
-<!-- Content Section -->
+<!-- ========================================= -->
+<!--         Mission and Vision.               -->
+<!-- ========================================= -->
 <section class="py-16 px-6 bg-gray-50 text-gray-800">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        <!-- Mission -->
-        <div>
-            <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
-            <p class="mb-4">
-                Our mission is to make property transactions hassle-free for everyone.
-                We provide verified listings, site visit assistance, and end-to-end support
-                so you can make confident decisions.
-            </p>
+        <div *ngFor="let section of missionVision">
+            <h2 class="text-2xl font-bold mb-4">{{ section.title }}</h2>
+            <p class="mb-4">{{ section.description }}</p>
             <ul class="space-y-2">
-                <li>✔️ Verified and transparent documentation</li>
-                <li>✔️ End-to-end property guidance</li>
-                <li>✔️ Dedicated customer support</li>
-            </ul>
-        </div>
-
-        <!-- Vision -->
-        <div>
-            <h2 class="text-2xl font-bold mb-4">Our Vision</h2>
-            <p class="mb-4">
-                We envision a world where property transactions are seamless,
-                trustworthy, and accessible for all. Our goal is to become a
-                one-stop solution for every property buyer and seller.
-            </p>
-            <ul class="space-y-2">
-                <li>✔️ Building trust with every deal</li>
-                <li>✔️ Bringing innovation to real estate</li>
-                <li>✔️ Empowering communities</li>
+                <li *ngFor="let feature of section.features">✔️ {{ feature }}</li>
             </ul>
         </div>
     </div>
 </section>
-
-
 
 
 <!-- ========================================= -->
@@ -65,45 +46,21 @@
             confidence.
         </p>
 
-
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 cards-row">
-
-
-            <div class="cards">
-                <img src="../../../../images/wcu/wcu-1.svg" alt="">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Wide Property Choices</h3>
-                <p class="text-gray-600">
-                    Explore a wide range of residential and commercial properties to suit every budget and lifestyle.
-                </p>
+            <div class="cards" *ngFor="let card of wcuCards">
+                <img [src]="card.img" [alt]="card.title">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ card.title }}</h3>
+                <p class="text-gray-600">{{ card.description }}</p>
             </div>
-
-
-            <div class="cards">
-                <img src="../../../../images/wcu/wcu-2.svg" alt="">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Trusted & Verified</h3>
-                <p class="text-gray-600">
-                    All our listings are verified to ensure transparency and reliability for your peace of mind.
-                </p>
-            </div>
-
-
-            <div class="cards">
-                <img src="../../../../images/wcu/wcu-3.svg" alt="">
-                <h3 class="text-xl font-semibold text-gray-800 mb-2">Expert Guidance</h3>
-                <p class="text-gray-600">
-                    Get personalized assistance from experienced real estate experts at every step of your journey.
-                </p>
-            </div>
-
         </div>
     </div>
 </section>
 
 
-<!-- Call to Action Section -->
+<!-- ========================================= -->
+<!--         Call To Action Section            -->
+<!-- ========================================= -->
 <section class="relative text-center text-white call-to-action py-20 px-6">
-
-
     <div class="relative max-w-3xl mx-auto">
         <h2 class="text-2xl md:text-3xl font-bold mb-6">
             Ready to Make Your Property Move?
@@ -113,7 +70,7 @@
             transactions.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a routerLink="/contact"
+            <a routerLink="/contact-us"
                 class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-md font-semibold transition-colors duration-300 primary-button ">
                 Contact Us
             </a>

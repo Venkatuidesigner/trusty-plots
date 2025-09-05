@@ -1,0 +1,47 @@
+/* Custom Angular Material Tabs */
+::ng-deep {
+    .custom-tab-group {
+        .mat-tab-label {
+            padding: 10px 24px;
+            font-weight: 600;
+            color: #555;
+            border-radius: 999px;
+            /* fully rounded */
+            transition: all 0.3s ease;
+            margin-right: 8px;
+            text-transform: none;
+
+            &:hover {
+                color: #2bb359;
+                background: rgba(43, 179, 89, 0.1);
+            }
+        }
+
+        .mat-tab-label.mat-tab-label-active {
+            color: #fff;
+            background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transform: scale(1.05);
+        }
+
+        /* Hide default ink bar */
+        .mat-ink-bar {
+            display: none;
+        }
+    }
+}
+
+::ng-deep {
+    .custom-tab-group {
+        .mdc-tab--active {
+            background: #ddfedd;
+            color: #ffffff;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+
+            .mdc-tab-indicator__content.mdc-tab-indicator__content--underline {
+                border-color: green !important
+            }
+        }
+    }
+}

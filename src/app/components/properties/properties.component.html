@@ -1,0 +1,59 @@
+<!-- ========================================= -->
+<!--             Main Hero Sec                 -->
+<!-- ========================================= -->
+<section class="relative bg-fixed bg-center bg-cover py-20 px-6"
+    style="background-image: url('../../../../images/main-bg.jpg');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
+
+    <div class="relative max-w-5xl mx-auto text-center text-white">
+        <h1 class="section-title">Properties</h1>
+        <p class="text-md leading-relaxed max-w-3xl mx-auto">
+            At <span class="text-green-500">TrustyPlots</span>, we believe that
+            buying and selling property should be simple, transparent, and stress-free.
+            With years of experience in real estate, we connect investors, homeowners,
+            and businesses with trusted opportunities across prime locations.
+        </p>
+    </div>
+</section>
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <!-- Section Title -->
+    <h2 class="section-title text-center mb-4"><span>Our </span> Properties</h2>
+    <p class="text-gray-600 mb-10 text-center max-w-2xl mx-auto">
+      Explore our latest residential and commercial properties carefully selected for you.
+    </p>
+
+    <!-- Angular Material Tabs -->
+<!-- Property Type Tabs -->
+<mat-tab-group
+  class="custom-tab-group mb-8"
+  (selectedTabChange)="onTabChange($event)"  mat-stretch-tabs="false" mat-align-tabs="center">
+
+  <mat-tab label="All"></mat-tab>
+  <mat-tab label="Apartment"></mat-tab>
+  <mat-tab label="Villa"></mat-tab>
+</mat-tab-group>
+
+
+    <!-- Cards Row -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="property-card" *ngFor="let property of filteredProperties" routerLink="/contact-us">
+        <div class="image-wrapper">
+          <img [src]="property.img" [alt]="property.title">
+        </div>
+        <div class="card-content">
+          <span class="text-sm font-semibold text-white bg-[#E91E63] px-3 py-1 rounded-full">
+            {{ property.type }}
+          </span>
+          <h3 class="mt-2 text-xl font-semibold text-gray-800">{{ property.title }}</h3>
+          <p class="text-gray-600 mb-1">{{ property.location }}</p>
+          <p class="text-gray-500 mb-2 text-sm">{{ property.details }}</p>
+          <p class="text-[#2bb359] font-bold text-lg">{{ property.price }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
