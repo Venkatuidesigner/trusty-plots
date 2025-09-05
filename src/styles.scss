@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 @use "tailwindcss";
 
-html,
-body {
-    height: 100%;
-}
+// html,
+// body {
+//     // height: 100%;
+// }
 
 body {
     margin: 0;
@@ -34,4 +34,47 @@ section {
             left: -60px;
         }
     }
+}
+
+.why-choose-us {
+  padding: 80px 0;
+
+  .cards-row {
+    .cards {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: -50px 4px 40px 0px rgba(0, 0, 0, 0.05);
+      margin-bottom: 15px;
+      border: 2px solid transparent;
+
+      img {
+        width: 100px;
+        margin: 0px auto;
+        padding: 25px 0;
+      }
+
+      &:hover {
+        border: 2px solid rgba(0, 175, 117, 0.7);
+        background: #ffffff;
+        transition: all .3s ease-out 0s;
+        box-shadow: 0 0px 22px 7px rgb(0 0 0 / 7%), 0 0px 11px 0 rgb(0 0 0 / 7%);
+      }
+    }
+  }
+}
+
+.call-to-action {
+  background: linear-gradient(148deg, rgba(12, 135, 186, 0.75) 0%, rgb(0 65 18 / 87%) 100%),
+  url("https://cdn.pixabay.com/photo/2016/11/29/09/16/architecture-1868667_1280.jpg");
+  background-size: cover;
+  background-position: botto;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.primary-button {
+  -webkit-box-shadow: 0px 0px 0px 4px rgb(27 178 68 / 22%);
+  box-shadow: 0px 0px 0px 4px rgb(27 178 68 / 22%);
+  border-radius: 50px;
 }

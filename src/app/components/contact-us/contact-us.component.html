@@ -1,1 +1,104 @@
-<p>contact-us works!</p>
+
+<section class="relative bg-fixed bg-center bg-cover py-20 px-6"
+    style="background-image: url('../../../../images/main-bg.jpg');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/60"></div>
+
+    <div class="relative max-w-5xl mx-auto text-center text-white">
+        <h1 class="section-title">Contact Us</h1>
+        <p class="text-md leading-relaxed max-w-3xl mx-auto">
+            From buying and selling to rentals and legal support — <span class="text-green-500">TrustyPlots</span> is your one-stop property partner.
+        </p>
+    </div>
+</section>
+
+
+<!-- Section 1: Contact Detail Cards -->
+<section class="w-full bg-gray-50 py-20">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+    <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
+      <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">location_on</span>
+      <h4 class="font-bold text-xl mb-2">Address</h4>
+      <p>123 TrustyPlots St, City, Country</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
+      <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">phone</span>
+      <h4 class="font-bold text-xl mb-2">Phone</h4>
+      <p>+91-9600141080</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
+      <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">email</span>
+      <h4 class="font-bold text-xl mb-2">Email</h4>
+      <p>info&#64;trustyplots.com</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
+      <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">language</span>
+      <h4 class="font-bold text-xl mb-2">Website</h4>
+      <p>www.trustyplots.com</p>
+    </div>
+  </div>
+</section>
+<section class="w-full bg-gray-50 py-20 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+
+    <!-- Map -->
+    <div class="w-full h-full rounded-2xl overflow-hidden shadow-lg">
+      <iframe
+        class="w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.000000!2d76.000000!3d10.000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba0000000000000%3A0x0000000000000000!2sYour%20Office%20Location!5e0!3m2!1sen!2sin!4v0000000000"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="bg-white rounded-2xl shadow-xl p-10 relative">
+      <h2 class="text-3xl font-bold mb-6">Send Us a Message</h2>
+
+      <form [formGroup]="contactForm" (ngSubmit)="sendMail()">
+
+        <!-- Name -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Name</label>
+          <input type="text" formControlName="name"
+                 class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <div *ngIf="f['name'].touched && f['name'].invalid" class="text-red-500 text-sm mt-1">
+            Name is required (min 2 characters)
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Email</label>
+          <input type="email" formControlName="email"
+                 class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <div *ngIf="f['email'].touched && f['email'].invalid" class="text-red-500 text-sm mt-1">
+            Enter a valid email
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Message</label>
+          <textarea formControlName="message" rows="6"
+                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+          <div *ngIf="f['message'].touched && f['message'].invalid" class="text-red-500 text-sm mt-1">
+            Message is required (min 10 characters)
+          </div>
+        </div>
+
+        <!-- Success / Error -->
+        <div *ngIf="successMessage" class="text-green-600 mb-4">{{ successMessage }}</div>
+        <div *ngIf="errorMessage" class="text-red-600 mb-4">{{ errorMessage }}</div>
+
+        <!-- Submit -->
+        <button type="submit" [disabled]="submitting"
+                class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition">
+          {{ submitting ? 'Sending...' : 'Send Message' }}
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
