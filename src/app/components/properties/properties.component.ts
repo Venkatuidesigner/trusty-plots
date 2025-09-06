@@ -30,7 +30,7 @@ export class PropertiesComponent {
       title: 'New Apartment Nice View',
       location: 'Belmont Gardens, Chicago',
       details: '3 Bed • 2 Bath • 3450 Sq Ft',
-      price: '$34,900',
+      price: '₹34,900',
       img: globals.property_1
     },
     {
@@ -39,7 +39,7 @@ export class PropertiesComponent {
       title: 'Luxury Villa',
       location: 'Palm Beach, Miami',
       details: '5 Bed • 4 Bath • 4500 Sq Ft',
-      price: '$65,000',
+      price: '₹65,000',
       img: globals.property_2
     },
     {
@@ -48,7 +48,7 @@ export class PropertiesComponent {
       title: 'City View Apartment',
       location: 'Downtown, New York',
       details: '2 Bed • 2 Bath • 1500 Sq Ft',
-      price: '$18,500',
+      price: '₹18,500',
       img: globals.property_3
     },
     {
@@ -57,7 +57,7 @@ export class PropertiesComponent {
       title: 'Cozy Cottage',
       location: 'Maple Street, Boston',
       details: '2 Bed • 1 Bath • 900 Sq Ft',
-      price: '$12,500',
+      price: '₹12,500',
       img: globals.property_4
     },
     {
@@ -66,7 +66,7 @@ export class PropertiesComponent {
       title: 'Luxury Villa',
       location: 'Palm Beach, Miami',
       details: '5 Bed • 4 Bath • 4500 Sq Ft',
-      price: '$65,000',
+      price: '₹65,000',
       img: globals.property_1
     },
     {
@@ -75,7 +75,7 @@ export class PropertiesComponent {
       title: 'City View Apartment',
       location: 'Downtown, New York',
       details: '2 Bed • 2 Bath • 1500 Sq Ft',
-      price: '$18,500',
+      price: '₹18,500',
       img: globals.property_2
     },
     {
@@ -84,7 +84,7 @@ export class PropertiesComponent {
       title: 'Cozy Cottage',
       location: 'Maple Street, Boston',
       details: '2 Bed • 1 Bath • 900 Sq Ft',
-      price: '$12,500',
+      price: '₹12,500',
       img: globals.property_3
     },
     {
@@ -93,7 +93,7 @@ export class PropertiesComponent {
       title: 'Cozy Cottage',
       location: 'Maple Street, Boston',
       details: '2 Bed • 1 Bath • 900 Sq Ft',
-      price: '$12,500',
+      price: '₹12,500',
       img: globals.property_3
     }
   ];
