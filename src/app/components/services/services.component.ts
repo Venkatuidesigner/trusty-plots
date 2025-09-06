@@ -43,4 +43,12 @@ export class ServicesComponent {
       routerLink: '/contact-us'
     }
   ];
+
+  ngAfterViewInit() {
+  const video: HTMLVideoElement | null = document.querySelector('video');
+  if (video) {
+    video.muted = true;   // force mute
+    video.play().catch(err => console.log("Autoplay blocked:", err));
+  }
+}
 }
