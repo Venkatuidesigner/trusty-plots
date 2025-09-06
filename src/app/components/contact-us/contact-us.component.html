@@ -23,7 +23,7 @@
     <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
       <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">location_on</span>
       <h4 class="font-bold text-xl mb-2">Address</h4>
-      <p>123 TrustyPlots St, City, Country</p>
+      <p>Velachery Chennai - 600042.</p>
     </div>
     <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
       <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">phone</span>
@@ -33,7 +33,7 @@
     <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
       <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">email</span>
       <h4 class="font-bold text-xl mb-2">Email</h4>
-      <p>info&#64;trustyplots.com</p>
+      <p><a href="mailto:info@trustyplots.in">info&#64;trustyplots.in</a></p>
     </div>
     <div class="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition hover:-translate-y-2 hover:shadow-2xl duration-500 relative overflow-hidden">
       <span class="material-icons text-green-500 text-5xl mb-4 bg-gradient-to-tr from-green-200 to-green-500 p-4 rounded-full shadow-lg">language</span>
@@ -69,30 +69,40 @@
 
         <!-- Name -->
         <div class="mb-4">
-          <label class="block text-gray-700 mb-2">Name</label>
+          <label class="block text-gray-700 mb-1">Name</label>
           <input type="text" formControlName="name"
-                 class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500">
-          <div *ngIf="f['name'].touched && f['name'].invalid" class="text-red-500 text-sm mt-1">
+                 class="w-full border border-gray-300 rounded-lg p-1.5 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <div *ngIf="f['name'].touched && f['name'].invalid" class="text-red-500 text-sm">
             Name is required (min 2 characters)
           </div>
         </div>
 
         <!-- Email -->
         <div class="mb-4">
-          <label class="block text-gray-700 mb-2">Email</label>
+          <label class="block text-gray-700 mb-1">Email</label>
           <input type="email" formControlName="email"
-                 class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500">
-          <div *ngIf="f['email'].touched && f['email'].invalid" class="text-red-500 text-sm mt-1">
+                 class="w-full border border-gray-300 rounded-lg p-1.5 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <div *ngIf="f['email'].touched && f['email'].invalid" class="text-red-500 text-sm">
             Enter a valid email
+          </div>
+        </div>
+
+                <!-- Email -->
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-1">Phone No</label>
+          <input type="number" formControlName="phone"
+                 class="w-full border border-gray-300 rounded-lg p-1.5 focus:outline-none focus:ring-2 focus:ring-green-500">
+          <div *ngIf="f['phone'].touched && f['phone'].invalid" class="text-red-500 text-sm">
+            Enter a valid Phone No
           </div>
         </div>
 
         <!-- Message -->
         <div class="mb-4">
-          <label class="block text-gray-700 mb-2">Message</label>
+          <label class="block text-gray-700 mb-1">Message</label>
           <textarea formControlName="message" rows="6"
-                    class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
-          <div *ngIf="f['message'].touched && f['message'].invalid" class="text-red-500 text-sm mt-1">
+                    class="w-full border border-gray-300 rounded-lg p-1.5 focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+          <div *ngIf="f['message'].touched && f['message'].invalid" class="text-red-500 text-sm">
             Message is required (min 10 characters)
           </div>
         </div>

@@ -86,6 +86,15 @@ export class PropertiesComponent {
       details: '2 Bed • 1 Bath • 900 Sq Ft',
       price: '$12,500',
       img: globals.property_3
+    },
+     {
+      type: 'Plots',
+      status: 'For Sale',
+      title: 'Cozy Cottage',
+      location: 'Maple Street, Boston',
+      details: '2 Bed • 1 Bath • 900 Sq Ft',
+      price: '$12,500',
+      img: globals.property_3
     }
   ];
 

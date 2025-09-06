@@ -17,6 +17,7 @@ export class ContactUsComponent {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10)]],
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
   }
@@ -35,6 +36,7 @@ export class ContactUsComponent {
     const formData = new FormData();
     formData.append('name', this.f['name'].value);
     formData.append('email', this.f['email'].value);
+    formData.append('phone', this.f['phone'].value);
     formData.append('message', this.f['message'].value);
 
     this.http.post('https://www.trustyplots.com/contact.php', formData, { responseType: 'text' })
