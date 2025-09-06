@@ -87,7 +87,7 @@ export class PropertiesComponent {
       price: '$12,500',
       img: globals.property_3
     },
-     {
+    {
       type: 'Plots',
       status: 'For Sale',
       title: 'Cozy Cottage',
@@ -98,7 +98,7 @@ export class PropertiesComponent {
     }
   ];
 
- get filteredProperties() {
+  get filteredProperties() {
     if (this.selectedType === 'All') return this.properties;
     return this.properties.filter(p => p.type === this.selectedType);
   }
@@ -113,6 +113,9 @@ export class PropertiesComponent {
         break;
       case 2:
         this.selectedType = 'Villa';
+        break;
+      case 3:
+        this.selectedType = 'Plots';
         break;
     }
   }

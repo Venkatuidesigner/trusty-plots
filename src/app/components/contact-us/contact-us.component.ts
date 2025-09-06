@@ -39,7 +39,7 @@ export class ContactUsComponent {
     formData.append('phone', this.f['phone'].value);
     formData.append('message', this.f['message'].value);
 
-    this.http.post('https://www.trustyplots.com/contact.php', formData, { responseType: 'text' })
+    this.http.post('https://trustyplots.com/contact.php', formData, { responseType: 'text' })
       .subscribe({
         next: (res) => {
           this.successMessage = res;
