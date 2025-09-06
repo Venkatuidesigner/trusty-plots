@@ -47,13 +47,13 @@ style="background: linear-gradient(148deg, rgba(12, 135, 186, 0.75) 0%, rgb(0 65
 
     <!-- Cards Row -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-      <div class="property-card" *ngFor="let property of properties">
+      <div class="property-card" *ngFor="let property of properties" routerLink="/contact-us">
         <div class="image-wrapper">
           <img [src]="property.img" [alt]="property.title">
         </div>
         <div class="card-content">
           <span class="text-sm font-semibold text-white bg-[#E91E63] px-3 py-1 rounded-full">
-            {{ property.status }}
+            {{ property.type }}
           </span>
           <h3 class="mt-2 text-xl font-semibold text-gray-800">{{ property.title }}</h3>
           <p class="text-gray-600 mb-1">{{ property.location }}</p>

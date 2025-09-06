@@ -25,77 +25,86 @@ export class PropertiesComponent {
 
   properties: Property[] = [
     {
-      type: 'Apartment',
+      type: 'Villa',
       status: 'For Sale',
-      title: 'New Apartment Nice View',
-      location: 'Belmont Gardens, Chicago',
-      details: '3 Bed • 2 Bath • 3450 Sq Ft',
-      price: '₹34,900',
+      title: 'New Perungalathur ',
+      location: 'Approved by MMDA',
+      details: '2 BHK • 2800 SF',
+      price: '₹5000/-SF',
       img: globals.property_1
     },
     {
       type: 'Villa',
       status: 'For Sale',
-      title: 'Luxury Villa',
-      location: 'Palm Beach, Miami',
-      details: '5 Bed • 4 Bath • 4500 Sq Ft',
-      price: '₹65,000',
+      title: 'Thiruporur',
+      location: 'Thiruporur',
+      details: '1250 SF',
+      price: '₹4000/-SF (Negotiable)',
       img: globals.property_2
     },
     {
       type: 'Apartment',
       status: 'For Sale',
-      title: 'City View Apartment',
-      location: 'Downtown, New York',
-      details: '2 Bed • 2 Bath • 1500 Sq Ft',
-      price: '₹18,500',
+      title: 'Guduvanchery',
+      location: 'Guduvanchery',
+      details: '3 BHK',
+      price: '₹72 L ',
       img: globals.property_3
-    },
-    {
-      type: 'Villa',
-      status: 'For Sale',
-      title: 'Cozy Cottage',
-      location: 'Maple Street, Boston',
-      details: '2 Bed • 1 Bath • 900 Sq Ft',
-      price: '₹12,500',
-      img: globals.property_4
-    },
-    {
-      type: 'Villa',
-      status: 'For Sale',
-      title: 'Luxury Villa',
-      location: 'Palm Beach, Miami',
-      details: '5 Bed • 4 Bath • 4500 Sq Ft',
-      price: '₹65,000',
-      img: globals.property_1
     },
     {
       type: 'Apartment',
       status: 'For Sale',
-      title: 'City View Apartment',
-      location: 'Downtown, New York',
-      details: '2 Bed • 2 Bath • 1500 Sq Ft',
-      price: '₹18,500',
-      img: globals.property_2
-    },
-    {
-      type: 'Villa',
-      status: 'For Sale',
-      title: 'Cozy Cottage',
-      location: 'Maple Street, Boston',
-      details: '2 Bed • 1 Bath • 900 Sq Ft',
-      price: '₹12,500',
+      title: 'Guduvanchery',
+      location: 'Guduvanchery',
+      details: '2 BHK',
+      price: '₹52 L ',
       img: globals.property_3
     },
-    {
-      type: 'Plots',
-      status: 'For Sale',
-      title: 'Cozy Cottage',
-      location: 'Maple Street, Boston',
-      details: '2 Bed • 1 Bath • 900 Sq Ft',
-      price: '₹12,500',
-      img: globals.property_3
-    }
+    // {
+    //   type: 'Villa',
+    //   status: 'For Sale',
+    //   title: 'Cozy Cottage',
+    //   location: 'Maple Street, Boston',
+    //   details: '2 Bed • 1 Bath • 900 Sq Ft',
+    //   price: '₹12,500',
+    //   img: globals.property_4
+    // },
+    // {
+    //   type: 'Villa',
+    //   status: 'For Sale',
+    //   title: 'Luxury Villa',
+    //   location: 'Palm Beach, Miami',
+    //   details: '5 Bed • 4 Bath • 4500 Sq Ft',
+    //   price: '₹65,000',
+    //   img: globals.property_1
+    // },
+    // {
+    //   type: 'Apartment',
+    //   status: 'For Sale',
+    //   title: 'City View Apartment',
+    //   location: 'Downtown, New York',
+    //   details: '2 Bed • 2 Bath • 1500 Sq Ft',
+    //   price: '₹18,500',
+    //   img: globals.property_2
+    // },
+    // {
+    //   type: 'Villa',
+    //   status: 'For Sale',
+    //   title: 'Cozy Cottage',
+    //   location: 'Maple Street, Boston',
+    //   details: '2 Bed • 1 Bath • 900 Sq Ft',
+    //   price: '₹12,500',
+    //   img: globals.property_3
+    // },
+    // {
+    //   type: 'Plots',
+    //   status: 'For Sale',
+    //   title: 'Cozy Cottage',
+    //   location: 'Maple Street, Boston',
+    //   details: '2 Bed • 1 Bath • 900 Sq Ft',
+    //   price: '₹12,500',
+    //   img: globals.property_3
+    // }
   ];
 
   get filteredProperties() {
